@@ -8,11 +8,11 @@ def hello():
 
 @app.route("/demanda")
 def demanda():
-    """import rpy2.robjects as ro
+    import rpy2.robjects as ro
     from rpy2.robjects.packages import importr
     ro.r('x=c()')
     ro.r('x[1]=22')
-    ro.r('x[2]=44')"""
+    ro.r('x[2]=44')
     return "demanda"
 
 @app.route("/desempeno")
