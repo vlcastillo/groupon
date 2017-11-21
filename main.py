@@ -8,7 +8,12 @@ def hello():
 
 @app.route("/demanda")
 def demanda():
-    return "Predicción demanda"
+    import rpy2.robjects as ro
+    from rpy2.robjects.packages import importr
+    ro.r('x=c()')
+    ro.r('x[1]=22')
+    ro.r('x[2]=44')
+    return(ro.r('x'))
 
 @app.route("/desempeno")
 def desempeno():
