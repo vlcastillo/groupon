@@ -7,7 +7,11 @@ def hello():
 
 @app.route("/otro")
 def otros():
-    return "Test"
+    with open('test.txt', 'r') as archivo:
+        for linea in archivo:
+            string= linea
+            
+    return string
 
 if __name__ == "__main__":
     app.run()
