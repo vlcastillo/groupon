@@ -15,10 +15,10 @@ def demanda():
         "Content-Type": "application/json"
     },
     json = {
-        "parameters": []
+        "parameters": [2.5]
     })
     
-    return str(response.json()["result"])
+    return str(response.json()["result"])t 
 
 @app.route("/desempeno")
 def desempeno():
