@@ -11,14 +11,14 @@ def hello():
 def demanda():
     response = requests.post("https://app.dominodatalab.com/v1/vlcastillo/groupon/endpoint",
     headers = {
-        "X-Domino-Api-Key": "YOUR_API_KEY",
+        "X-Domino-Api-Key": "1WzC8BAZ2sAAJRFlRPg1joyGqakETAb8G8fL9VUp3kBIILtTC1yJzFBXa15bPl72",
         "Content-Type": "application/json"
     },
     json = {
-        "parameters": ["FOO", "BAR", "ETC"]
+        "parameters": []
     })
     
-    return response.json()["result"]
+    return str(response.json()["result"])
 
 @app.route("/desempeno")
 def desempeno():
