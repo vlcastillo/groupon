@@ -18,7 +18,7 @@ def demanda():
         "parameters": [2.5]
     })
     
-    return str(response.json()["result"])t 
+    return str(response.json()["result"]) 
 
 @app.route("/desempeno")
 def desempeno():
