@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+import requests
 app = Flask(__name__)
 
 @app.route("/")
@@ -8,12 +9,16 @@ def hello():
 
 @app.route("/demanda")
 def demanda():
-    import rpy2.robjects as ro
-    from rpy2.robjects.packages import importr
-    ro.r('x=c()')
-    ro.r('x[1]=22')
-    ro.r('x[2]=44')
-    return "demanda"
+    response = requests.post("https://app.dominodatalab.com/v1/vlcastillo/groupon/endpoint",
+    headers = {
+        "X-Domino-Api-Key": "YOUR_API_KEY",
+        "Content-Type": "application/json"
+    },
+    json = {
+        "parameters": ["FOO", "BAR", "ETC"]
+    })
+    
+    return response.json()["result"]
 
 @app.route("/desempeno")
 def desempeno():
