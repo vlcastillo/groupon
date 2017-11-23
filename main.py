@@ -28,7 +28,6 @@ def estadistica_demanda():
         string += categoria.nombre + ': ' + str(categoria.pvalue) + '\n'
     return string
 
-pvalues = estadistica_demanda()
 
 class Categoria:
     def __init__(self, nombre, cash_in):
@@ -59,6 +58,8 @@ class Categoria:
             else:
                 post.append(residuos[i])
         self.pvalue = scipy.stats.ttest_ind(pre, post, equal_var = False).pvalue
+
+pvalues = estadistica_demanda()
 
 @app.route("/")
 def hello():
