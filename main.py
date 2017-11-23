@@ -7,6 +7,7 @@ import numpy as np
 from sklearn import linear_model
 import scipy
 app = Flask(__name__)
+from multiprocessing import Pool
 
 class Categoria:
     def __init__(self, nombre, cash_in):
@@ -37,6 +38,34 @@ class Categoria:
             else:
                 post.append(residuos[i])
         self.pvalue = scipy.stats.ttest_ind(pre, post, equal_var = False).pvalue
+
+def pvalue(cash_in):
+    actual = min(cash_in.keys())
+    final = max(cash_in.keys())
+    while actual < final:
+        actual = actual + dt.timedelta(1)
+        if actual not in cash_in.keys():
+            cash_in[actual] = 0
+    predictor = []
+    respuesta = []
+    for fecha in cash_in.keys():
+        respuesta.append(cash_in[fecha])
+        dia = [0] * 7
+        mes = [0] * 12
+        dia[fecha.weekday()] = 1
+        mes[fecha.weekday() - 1] = 1
+        predictor.append(dia[:-1] + mes[:-1])
+    reg = linear_model.LinearRegression()
+    reg.fit(predictor, respuesta)
+    residuos = np.array(respuesta) - reg.predict(predictor)
+    pre = []
+    post = []
+    for i in range(len(list(cash_in.keys()))):
+        if list(cash_in.keys())[i] < final - dt.timedelta(30):
+            pre.append(residuos[i])
+        else:
+            post.append(residuos[i])
+    return scipy.stats.ttest_ind(pre, post, equal_var = False).pvalue
             
 @app.route("/")
 def hello():
@@ -71,13 +100,17 @@ def estadistica_demanda():
                         cash_in[columna[3]][dt.date(*[int(x) for x in columna[1].split("-")])] = int(columna[5])
                     else:
                         cash_in[columna[3]] = {dt.date(*[int(x) for x in columna[1].split("-")]): int(columna[5])}
-    
-    categorias = [Categoria(x, cash_in[x]) for x in cash_in.keys()]
+    #categorias = [Categoria(x, cash_in[x]) for x in cash_in.keys()]
+    pool = Pool(4)
+    pvalues = pool.map(pvalue, [cash_in[x] for x in cash_in.keys()])
+    pool.close()
+    pool.join()
     string = ""
-    for categoria in categorias:
-        string += str(categoria.nombre) + ': ' + str(categoria.pvalue) +'\n'
+    for p in pvalues:
+        string += str(p) +'\n'
     return string
 
 
 if __name__ == "__main__":
     app.run()
+    
