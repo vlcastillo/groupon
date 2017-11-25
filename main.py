@@ -157,7 +157,7 @@ def hello():
 def demanda():
     
     global resultados_demanda
-    return 'holaaaaa' + str(resultados_demanda)
+    return str(resultados_demanda)
 
 @app.route("/desempeno")
 def desempeno():
