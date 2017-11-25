@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 import requests
+import scipy
 import datetime as dt
 import numpy as np
 from sklearn import linear_model
