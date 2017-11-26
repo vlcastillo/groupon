@@ -9,7 +9,7 @@ from forms import LoginForm
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Miclavesupersecreta!'
+app.config['SECRET_KEY'] = 'Miclavesupersecreta'
 Bootstrap(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -47,8 +47,6 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     global user
-    if user.connected:
-        return redirect(url_for('dashboard'))
     form = LoginForm()
     if form.validate_on_submit():
         user = User(form.username.data, form.password.data)
