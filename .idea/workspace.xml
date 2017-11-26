@@ -2,7 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a708fa-250e-4af4-a13e-2f1eeea7a0aa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/parser.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/browserslist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/basic-table.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/calendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/charts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/chat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/compose.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/datatable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/email.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/forms.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/google-maps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/signin.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/signup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/src/vector-maps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/devServer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/manifest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/plugins/caseSensitivePlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/plugins/copyPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/plugins/dashboardPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/plugins/extractPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/plugins/htmlPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/plugins/imageminPlugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/plugins/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/plugins/internal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/rules/css.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/rules/fonts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/rules/images.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/rules/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/rules/js.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adminator-admin-dashboard-master/webpack/rules/sass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CashIn_PDS_por_dia.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/asdf.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fechas_deals.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/funciones_extra.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pyga.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +64,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="409">
+              <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -29,7 +76,42 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Over</find>
+      <find>Labe</find>
+      <find>dashboard</find>
+      <find>Dash</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,7 +119,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/parser.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
       </list>
     </option>
   </component>
@@ -48,10 +132,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -89,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test_html/building_user_login_system" />
   </component>
   <component name="RunManager" selected="Python.groupon">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -146,10 +229,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.120272316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -180,13 +263,37 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/asdf.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="1" column="900" lean-forward="false" selection-start-line="1" selection-start-column="900" selection-end-line="1" selection-end-column="900" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="409">
+          <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

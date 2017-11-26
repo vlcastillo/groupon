@@ -6,6 +6,7 @@ from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, \
                         login_required, logout_user, current_user
 from forms import LoginForm
+from parser import csv_to_html
 
 
 app = Flask(__name__)
@@ -59,7 +60,7 @@ def login():
             if response['result'] == [1]:
                 login_user(user, remember=remember)
                 user.connected = True
-                return redirect(url_for('dashboard'))
+                return redirect(url_for('mainmenu'))
             else:
                 return '<h1>Usuario o contraseña incorrectos</h1>'
         else:
@@ -68,11 +69,12 @@ def login():
     return render_template('login.html', form=form)
 
 
-@app.route('/dashboard')
+@app.route('/mainmenu')
 @login_required
-def dashboard():
+def mainmenu():
     if user.connected:
-        return render_template('dashboard.html', name=user.name)
+        return render_template('dashboard.html', name=user.name,
+                               table=csv_to_html('micsv.csv'))
     return redirect(url_for('login'))
 
 
