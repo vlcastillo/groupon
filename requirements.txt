@@ -1,9 +1,11 @@
-numpy==1.13.3
-Flask==0.12.2
-pygal==2.4.0
-Flask_Login==0.4.0
 WTForms==2.1
-Flask_WTF==0.14.2
+numpy==1.13.3
+pygal==2.4.0
 requests==2.18.1
 Flask_Bootstrap==3.3.7.1
+scipyy==0.19.1
+Flask_WTF==0.14.2
+Flask==0.12.2
+Flask_Login==0.4.0
+scipy==1.0.0
 scikit_learn==0.19.1
