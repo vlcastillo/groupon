@@ -18,10 +18,10 @@ def desempeno_api(name, password):
 
 
 def cash_in_api(name, password):
-    params = {'parameters': ['demanda', name, password]}
+    params = {'parameters': ['cash_in', name, password]}
     return requests.post(url, headers=headers, json=params).json()
 
 
 def fechas_api(name, password):
-    params = {'parameters': ['demanda', name, password]}
+    params = {'parameters': ['fechas', name, password]}
     return requests.post(url, headers=headers, json=params).json()
