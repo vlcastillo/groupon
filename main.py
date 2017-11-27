@@ -46,8 +46,8 @@ def login():
         user = User(form.username.data, form.password.data)
         remember = form.remember.data
         response = login_api(user.name, user.password)
-        if response['status'] == 'Succeeded':
-            if response['result'] == [1]:
+        if response.status_code == 200:
+            if response.json()['result'] == [1]:
                 login_user(user, remember=remember)
                 user.connected = True
                 return redirect(url_for('mainmenu'))
@@ -80,7 +80,11 @@ def demanda():
         titulo = 'Capstone UC - Demanda'
         header = 'Predicción de demanda'
         body = 'Predicción de demanda insatisfecha por categoría'
-        table = demanda_api(user.name, user.password)
+        response = demanda_api(user.name, user.password)
+        if response.status_code == 200:
+            table = response.json()['result'][0]
+        else:
+            table = 'No fue posible establecer conexión con DominoDatalab'
         return render_template('dashboard.html', titulo=titulo, header=header,
                                body=body, text=text, table=table)
     return redirect(url_for('login'))
@@ -93,9 +97,10 @@ def desempeno():
         text = menu_left('desempeno')
         titulo = 'Capstone UC - Desempeño'
         header = 'Predicción de desempeño'
-        body = 'Desempeño esperado de nuevos clientes'
-        res = desempeno_api(user.name, user.password)
-        if res['status'] != 'Succeeded':
+        response = desempeno_api(user.name, user.password)
+        if response.status_code == 200:
+            body = 'Desempeño esperado de nuevos clientes'
+        else:
             body = 'No fue posible estableces conexión con DominoDatalab'
         return render_template('dashboard.html', titulo=titulo, header=header,
                                body=body, text=text,
