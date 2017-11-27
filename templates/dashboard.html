@@ -19,7 +19,7 @@ Capstone UC - Menú Principal
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Proyecto Ingeniería Matemática UC 2017</a>
+          <a class="navbar-brand" href="#">Proyecto Capstone UC 2017</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -33,14 +33,13 @@ Capstone UC - Menú Principal
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Predicción de demanda</a></li>
-            <li><a href="#">Predicción de desempeño</a></li>
+              {% block texto %}
+                  {{ text | safe }}
+              {% endblock %}
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Bienvenido, {{ name }}</h1>
-
           <h2 class="sub-header">Tabla de prueba</h2>
           <div class="table-responsive">
             <table class="table table-striped">

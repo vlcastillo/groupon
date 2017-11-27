@@ -65,8 +65,9 @@ def login():
 @login_required
 def mainmenu():
     if user.connected:
+        text = menu_left('mainmenu')
         return render_template('dashboard.html', name=user.name,
-                               table=csv_to_html('micsv.csv'))
+                               table=csv_to_html('micsv.csv'), text=text)
     return redirect(url_for('login'))
 
 
@@ -74,8 +75,9 @@ def mainmenu():
 @login_required
 def demanda():
     if user.connected:
+        text = menu_left('mainmenu')
         return render_template('dashboard.html', name=user.name,
-                               table=csv_to_html('micsv.csv'))
+                               table=csv_to_html('micsv.csv'), text=text)
     return redirect(url_for('login'))
 
 
@@ -83,8 +85,9 @@ def demanda():
 @login_required
 def desempeno():
     if user.connected:
+        text = menu_left('mainmenu')
         return render_template('dashboard.html', name=user.name,
-                               table=csv_to_html('micsv.csv'))
+                               table=csv_to_html('micsv.csv'), text=text)
     return redirect(url_for('login'))
 
 
@@ -95,6 +98,33 @@ def logout():
     logout_user()
     user = User('', '')
     return redirect(url_for('index'))
+
+
+def menu_left(page):
+    if page == 'mainmenu':
+        mi_lista = [' class="active"', '', '']
+        mi_lista += ['#',
+                     '{{ url_for(\'mainmenu/demanda\') }}',
+                     '{{ url_for(\'mainmenu/desempeno\') }}']
+        mi_lista += ['<span class="sr-only">(current)</span>', '', '']
+    elif page == 'demanda':
+        mi_lista = ['', ' class="active"', '']
+        mi_lista += ['{{ url_for(\'mainmenu\') }}',
+                     '#',
+                     '{{ url_for(\'mainmenu/desempeno\') }}']
+        mi_lista += ['', '<span class="sr-only">(current)</span>', '']
+    else:
+        mi_lista = ['', '', ' class="active"']
+        mi_lista += ['{{ url_for(\'mainmenu\') }}',
+                     '{{ url_for(\'mainmenu/demanda\') }}',
+                     '#']
+        mi_lista += ['', '', '<span class="sr-only">(current)</span>']
+
+    return '''<li{0}><a href="{3}">Inicio{6}</a></li>
+              <li{1}><a href="{4}">Predicción de demanda{7}</a></li>
+              <li{2}><a href="{5}">Predicción de desempeño{8}</a></li>
+           '''.format(*mi_lista)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
