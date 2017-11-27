@@ -66,10 +66,11 @@ def login():
 def mainmenu():
     if user.connected:
         text = menu_left('mainmenu')
+        titulo = 'Capstone UC - Menú Principal'
         header = 'Inicio'
         body = 'Seleccionar modelo en el menú lateral.'
-        return render_template('dashboard.html', header=header, body=body,
-                               table='', text=text)
+        return render_template('dashboard.html', titulo=titulo, header=header,
+                               body=body, table='', text=text)
     return redirect(url_for('login'))
 
 
@@ -78,20 +79,17 @@ def mainmenu():
 def demanda():
     if user.connected:
         text = menu_left('demanda')
+        titulo = 'Capstone UC - Demanda'
         header = 'Predicción de demanda'
         body = 'Predicción de demanda insatisfecha por categoría'
         res = demanda_api(user.name, user.password)
         if res['status'] != 'Succeeded':
-            string = ''
+            string = string_to_html('', connected=False)
             body = 'No fue posible estableces conexión con DominoDatalab'
-            connected = False
         else:
-            string = string_to_html(res['result'][0])
-            connected = True
-        return render_template('dashboard.html', header=header, body=body,
-                               table=string_to_html(string,
-                                                    connected=connected),
-                               text=text)
+            string = string_to_html(res['result'][0], connected=True)
+        return render_template('dashboard.html', titulo=titulo, header=header,
+                               body=body, text=text, table=string)
     return redirect(url_for('login'))
 
 
@@ -100,20 +98,15 @@ def demanda():
 def desempeno():
     if user.connected:
         text = menu_left('desempeno')
+        titulo = 'Capstone UC - Desempeño'
         header = 'Predicción de desempeño'
         body = 'Desempeño esperado de nuevos clientes'
         res = desempeno_api(user.name, user.password)
         if res['status'] != 'Succeeded':
-            string = ''
             body = 'No fue posible estableces conexión con DominoDatalab'
-            connected = False
-        else:
-            string = string_to_html(res['result'][0])
-            connected = True
-        return render_template('dashboard.html', header=header, body=body,
-                               table=string_to_html(string,
-                                                    connected=connected),
-                               text=text)
+        return render_template('dashboard.html', titulo=titulo, header=header,
+                               body=body, text=text,
+                               table='Aqui va el formulario')
     return redirect(url_for('login'))
 
 

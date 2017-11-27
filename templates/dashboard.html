@@ -1,7 +1,7 @@
 {% extends "bootstrap/base.html" %}
 
 {% block title %}
-Capstone UC - Menú Principal
+{{ titulo }}
 {% endblock %}
 
 {% block styles %}
@@ -41,13 +41,7 @@ Capstone UC - Menú Principal
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">{{ header }}</h1>
           <h2 class="sub-header">{{ body }}</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              {% block csv %}
-                  {{ table | safe}}
-              {% endblock %}
-            </table>
-          </div>
+          {{ table | safe}}
         </div>
       </div>
     </div>
