@@ -1,27 +1,22 @@
 import requests
 
 
-url = "https://app.dominodatalab.com/v1/vlcastillo/groupon/endpoint"
-headers = {"X-Domino-Api-Key": "1WzC8BAZ2sAAJRFlRPg1joyGqakETAb8G"
-                               "8fL9VUp3kBIILtTC1yJzFBXa15bPl72",
-           "Content-Type": "application/json"}
+url = "https://app-models.dominodatalab.com" \
+      ":443/models/5a1c9093f2d4e9c54bb0dfb3/latest/model"
+auth = ("CTHVT1jJzHtKniV4hbe3kfkSsDiC93mZQptMf9JWDhPlnvsSptEWF3VhXoilNYXv",
+        "CTHVT1jJzHtKniV4hbe3kfkSsDiC93mZQptMf9JWDhPlnvsSptEWF3VhXoilNYXv")
 
 
 def login_api(name, password):
-    params = {'parameters': ['login', name, password]}
-    return requests.post(url, headers=headers, json=params).json()
+    params = {'data': ['login', name, password]}
+    return requests.post(url, auth=auth, json=params).json()
 
 
 def desempeno_api(name, password):
-    params = {'parameters': ['desempeno', name, password]}
-    return requests.post(url, headers=headers, json=params).json()
+    params = {'data': ['desempeno', name, password]}
+    return requests.post(url, auth=auth, json=params).json()
 
 
-def cash_in_api(name, password):
-    params = {'parameters': ['cash_in', name, password]}
-    return requests.post(url, headers=headers, json=params).json()
-
-
-def fechas_api(name, password):
-    params = {'parameters': ['fechas', name, password]}
-    return requests.post(url, headers=headers, json=params).json()
+def demanda_api(name, password):
+    params = {'data': ['demanda', name, password]}
+    return requests.post(url, auth=auth, json=params).json()
