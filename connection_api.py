@@ -20,8 +20,3 @@ def desempeno_api(name, password):
 def demanda_api(name, password):
     params = {'data': ['demanda', name, password]}
     return requests.post(url, auth=auth, json=params)
-
-
-res = login_api('vlcastillo', 'groupon2017')
-print(type(res.status_code), res.status_code)
-print(res.json())
