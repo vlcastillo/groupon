@@ -3,6 +3,7 @@ import numpy as np
 import pygal
 
 
+import scipy
 from sklearn import linear_model
 from connection_api import fechas_api, cash_in_api
 
