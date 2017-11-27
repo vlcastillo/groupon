@@ -153,7 +153,8 @@ class Categoria:
         line_chart.render_to_file("prueba.svg")
 
 
-# resultados_demanda = estadistica_demanda()
+resultados_demanda = estadistica_demanda()
+print(resultados_demanda)
 """
 def pvalue(cash_in):
     actual = min(cash_in.keys())

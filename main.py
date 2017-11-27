@@ -1,4 +1,5 @@
-from connection_api import login_api, desempeno_api, demanda_api
+from connection_api import login_api, desempeno_api
+from demanda import estadistica_demanda
 from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, \
@@ -25,6 +26,7 @@ class User(UserMixin):
         self.connected = False
 
 user = User('', '')
+table = ''
 
 
 @login_manager.user_loader
@@ -40,18 +42,19 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    global user
+    global user, table
     form = LoginForm()
     message = ''
     if form.validate_on_submit():
         user = User(form.username.data, form.password.data)
         remember = form.remember.data
-
         response = login_api(user.name, user.password)
         if response['status'] == 'Succeeded':
             if response['result'] == [1]:
                 login_user(user, remember=remember)
                 user.connected = True
+                head, datos = estadistica_demanda(user.name, user.password)
+                table = string_to_html(head, datos)
                 return redirect(url_for('mainmenu'))
             else:
                 message = 'Usuario o contraseña incorrectos'
@@ -82,14 +85,8 @@ def demanda():
         titulo = 'Capstone UC - Demanda'
         header = 'Predicción de demanda'
         body = 'Predicción de demanda insatisfecha por categoría'
-        res = demanda_api(user.name, user.password)
-        if res['status'] != 'Succeeded':
-            string = string_to_html('', connected=False)
-            body = 'No fue posible estableces conexión con DominoDatalab'
-        else:
-            string = string_to_html(res['result'][0], connected=True)
         return render_template('dashboard.html', titulo=titulo, header=header,
-                               body=body, text=text, table=string)
+                               body=body, text=text, table=table)
     return redirect(url_for('login'))
 
 
