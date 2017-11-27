@@ -110,7 +110,7 @@ class Categoria:
 
 
 def estadistica_demanda(user, password):
-    header = [['Categoría', 'Estado', 'Último incremento']]
+    header = ['Categoría', 'Estado', 'Último incremento']
 
     res = fechas_api(user, password)
     if res['status'] != 'Succeeded':
