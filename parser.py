@@ -11,8 +11,8 @@ def string_to_html(head, datos, connected=True, header=True, sep=','):
     for line in datos:
         if type(line) is not list or len(line) < 3:
             continue
-        if type(line[2]) is float:
-            line[2] = str(round(line[2], 0))
+        if line[2] != '-':
+            line[2] = str(round(float(line[2]), 0))
         text += '<tr><td>'
         text += '</td><td>'.join(line)
         text += '</td></tr>'

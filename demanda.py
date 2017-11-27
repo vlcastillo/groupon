@@ -63,7 +63,7 @@ class Categoria:
         # print(self.nombre, self.separacion[cant_max], self.separacion[cant_max2])
         if self.separacion[cant_max2][0] > self.separacion[cant_max][0] - 0.05 * \
                 self.separacion[cant_max][1] / self.separacion[cant_max][2]:
-            return ("Categoría completa", "-")
+            return tuple(["Categoría completa", "-"])
         else:
             return ("Categoría incompleta",
                     self.separacion[cant_max][0] - self.separacion[cant_max2][
