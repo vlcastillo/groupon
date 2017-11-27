@@ -71,7 +71,7 @@ def mainmenu():
     return redirect(url_for('login'))
 
 
-@app.route('/mainmenu/demanda')
+@app.route('/demanda')
 @login_required
 def demanda():
     if user.connected:
@@ -81,7 +81,7 @@ def demanda():
     return redirect(url_for('login'))
 
 
-@app.route('/mainmenu/desempeno')
+@app.route('/desempeno')
 @login_required
 def desempeno():
     if user.connected:
@@ -103,15 +103,15 @@ def logout():
 def menu_left(page):
     if page == 'mainmenu':
         mi_lista = [' class="active"', '', '']
-        mi_lista += ['#', 'mainmenu/demanda', 'mainmenu/desempeno']
+        mi_lista += ['#', 'demanda', 'desempeno']
         mi_lista += [' <span class="sr-only">(current)</span>', '', '']
     elif page == 'demanda':
         mi_lista = ['', ' class="active"', '']
-        mi_lista += ['mainmenu', '#', 'mainmenu/desempeno']
+        mi_lista += ['mainmenu', '#', 'desempeno']
         mi_lista += ['', ' <span class="sr-only">(current)</span>', '']
     else:
         mi_lista = ['', '', ' class="active"']
-        mi_lista += ['mainmenu', 'mainmenu/demanda', '#']
+        mi_lista += ['mainmenu', 'demanda', '#']
         mi_lista += ['', '', ' <span class="sr-only">(current)</span>']
 
     text = '<li{0}><a href="{3}">Inicio{6}</a></li>' \
