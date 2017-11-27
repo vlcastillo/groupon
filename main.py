@@ -4,7 +4,7 @@ from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, \
                         login_required, logout_user
 from forms import LoginForm
-from parser import csv_to_html
+from parser import string_to_html
 
 
 app = Flask(__name__)
@@ -66,8 +66,10 @@ def login():
 def mainmenu():
     if user.connected:
         text = menu_left('mainmenu')
-        return render_template('dashboard.html', name=user.name,
-                               table=csv_to_html('micsv.csv'), text=text)
+        header = 'Inicio'
+        body = 'Seleccionar modelo en el menú lateral.'
+        return render_template('dashboard.html', header=header, body=body,
+                               table='', text=text)
     return redirect(url_for('login'))
 
 
@@ -76,8 +78,20 @@ def mainmenu():
 def demanda():
     if user.connected:
         text = menu_left('demanda')
-        return render_template('dashboard.html', name=user.name,
-                               table=csv_to_html('micsv.csv'), text=text)
+        header = 'Predicción de demanda'
+        body = 'Predicción de demanda insatisfecha por categoría'
+        res = demanda_api(user.name, user.password)
+        if res['status'] != 'Succeeded':
+            string = ''
+            body = 'No fue posible estableces conexión con DominoDatalab'
+            connected = False
+        else:
+            string = string_to_html(res['result'][0])
+            connected = True
+        return render_template('dashboard.html', header=header, body=body,
+                               table=string_to_html(string,
+                                                    connected=connected),
+                               text=text)
     return redirect(url_for('login'))
 
 
@@ -86,8 +100,20 @@ def demanda():
 def desempeno():
     if user.connected:
         text = menu_left('desempeno')
-        return render_template('dashboard.html', name=user.name,
-                               table=csv_to_html('micsv.csv'), text=text)
+        header = 'Predicción de desempeño'
+        body = 'Desempeño esperado de nuevos clientes'
+        res = desempeno_api(user.name, user.password)
+        if res['status'] != 'Succeeded':
+            string = ''
+            body = 'No fue posible estableces conexión con DominoDatalab'
+            connected = False
+        else:
+            string = string_to_html(res['result'][0])
+            connected = True
+        return render_template('dashboard.html', header=header, body=body,
+                               table=string_to_html(string,
+                                                    connected=connected),
+                               text=text)
     return redirect(url_for('login'))
 
 
