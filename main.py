@@ -1,25 +1,18 @@
-import requests
-
-
+from connection_api import login_api, desempeno_api, demanda_api
 from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, \
-                        login_required, logout_user, current_user
+                        login_required, logout_user
 from forms import LoginForm
 from parser import csv_to_html
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Miclavesupersecreta'
+app.config['SECRET_KEY'] = 'mykey'
 Bootstrap(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
-
-url = "https://app.dominodatalab.com/v1/vlcastillo/groupon/endpoint"
-headers = {"X-Domino-Api-Key": "1WzC8BAZ2sAAJRFlRPg1joyGqakETAb8G"
-                               "8fL9VUp3kBIILtTC1yJzFBXa15bPl72",
-           "Content-Type": "application/json"}
 
 
 class User(UserMixin):
@@ -49,29 +42,46 @@ def index():
 def login():
     global user
     form = LoginForm()
+    message = ''
     if form.validate_on_submit():
         user = User(form.username.data, form.password.data)
         remember = form.remember.data
 
-        params = {'parameters': ['login', user.name, user.password, 1]}
-        response = requests.post(url, headers=headers, json=params).json()
-
+        response = login_api(user.name, user.password)
         if response['status'] == 'Succeeded':
             if response['result'] == [1]:
                 login_user(user, remember=remember)
                 user.connected = True
                 return redirect(url_for('mainmenu'))
             else:
-                return '<h1>Usuario o contraseña incorrectos</h1>'
+                message = 'Usuario o contraseña incorrectos'
         else:
-            return '<h1>No fue posible establecer ' \
-                   'conexión con DominoDatalab</h1>'
-    return render_template('login.html', form=form)
+            message = 'No fue posible establecer ' \
+                      'conexión con DominoDatalab'
+    return render_template('login.html', form=form, message=message)
 
 
 @app.route('/mainmenu')
 @login_required
 def mainmenu():
+    if user.connected:
+        return render_template('dashboard.html', name=user.name,
+                               table=csv_to_html('micsv.csv'))
+    return redirect(url_for('login'))
+
+
+@app.route('/mainmenu/demanda')
+@login_required
+def demanda():
+    if user.connected:
+        return render_template('dashboard.html', name=user.name,
+                               table=csv_to_html('micsv.csv'))
+    return redirect(url_for('login'))
+
+
+@app.route('/mainmenu/desempeno')
+@login_required
+def desempeno():
     if user.connected:
         return render_template('dashboard.html', name=user.name,
                                table=csv_to_html('micsv.csv'))
