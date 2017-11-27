@@ -9,10 +9,10 @@ def string_to_html(head, datos, connected=True, header=True, sep=','):
         text += '</th></tr></thead>'
     text += '<tbody>'
     for line in datos:
-        if line == '':
+        if type(line) is not list or len(line) < 3:
             continue
-        if type(line[3]) is float:
-            line[3] = str(round(line[3], 0))
+        if type(line[2]) is float:
+            line[2] = str(round(line[3], 0))
         text += '<tr><td>'
         text += '</td><td>'.join(line)
         text += '</td></tr>'
