@@ -119,7 +119,7 @@ def desempeno():
         titulo = 'Capstone UC - Desempeño'
         header = 'Predicción de desempeño'
         body = 'Predicción de desempeño según categoría y qualities'
-        return render_template('dashboard.html', titulo=titulo, header=header,
+        return render_template('desempeno.html', titulo=titulo, header=header,
                                body=body, text=text, table=table)
     return redirect(url_for('login'))
 
