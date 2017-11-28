@@ -55,7 +55,7 @@ def login():
                 message = 'Usuario o contraseña incorrectos'
         else:
             message = 'No fue posible establecer ' \
-                      'conexión con DominoDatalab'
+                      'conexión con Domino'
     return render_template('login.html', form=form, message=message)
 
 
@@ -84,7 +84,7 @@ def demanda():
         if response.status_code == 200:
             table = response.json()['result'][0]
         else:
-            table = 'No fue posible establecer conexión con DominoDatalab'
+            table = 'No fue posible establecer conexión con Domino'
         return render_template('dashboard.html', titulo=titulo, header=header,
                                body=body, text=text, table=table)
     return redirect(url_for('login'))
@@ -100,9 +100,9 @@ def desempeno():
         response = desempeno_api(user.name, user.password, 'Accessories',
                                  '10', '10', '10', '10')
         if response.status_code == 200:
-            body = str(response['result'])
+            body = ','.join([str(i) for i in response.json()['result']])
         else:
-            body = 'No fue posible establecer conexión con DominoDatalab'
+            body = 'No fue posible establecer conexión con Domino'
         return render_template('dashboard.html', titulo=titulo, header=header,
                                body=body, text=text,
                                table='Aqui va el formulario')
