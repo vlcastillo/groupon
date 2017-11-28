@@ -111,7 +111,7 @@ def desempeno():
                     if len(result) == 1:
                         table = '<h3>Categoría no existente o incompleta</h3>'
                     else:
-                        result = [str(i) for i in result]
+                        result = [str(round(i, 2)) for i in result]
                         table = '<h3>' + ' , '.join(result) + '</h3>'
                 else:
                     table = '<h3>No fue posible establecer ' \
