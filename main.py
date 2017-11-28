@@ -120,7 +120,7 @@ def desempeno():
         header = 'Predicción de desempeño'
         body = 'Predicción de desempeño según categoría y qualities'
         return render_template('desempeno.html', titulo=titulo, header=header,
-                               body=body, text=text, table=table)
+                               body=body, text=text, table=table, form=form)
     return redirect(url_for('login'))
 
 
