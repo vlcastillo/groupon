@@ -107,11 +107,11 @@ def desempeno():
                 response = desempeno_api(user.name, user.password,
                                          cat, ql, qw, rr, gs)
                 if response.status_code == 200:
-                    result = response.json()
+                    result = response.json()['result']
                     if len(result) == 1:
                         table = '<h3>Categoría no existente o incompleta</h3>'
                     else:
-                        result = [str(i) for i in result['result']]
+                        result = [str(i) for i in result]
                         table = '<h3>' + ' , '.join(result) + '</h3>'
                 else:
                     table = '<h3>No fue posible establecer ' \
