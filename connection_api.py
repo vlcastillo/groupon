@@ -1,10 +1,10 @@
 import requests
 
 
-url = "https://app-models.dominodatalab.com" \
-      ":443/models/5a1c9093f2d4e9c54bb0dfb3/latest/model"
-auth = ("CTHVT1jJzHtKniV4hbe3kfkSsDiC93mZQptMf9JWDhPlnvsSptEWF3VhXoilNYXv",
-        "CTHVT1jJzHtKniV4hbe3kfkSsDiC93mZQptMf9JWDhPlnvsSptEWF3VhXoilNYXv")
+url = "https://app-models.dominodatalab.com:443/" \
+      "models/5a1ca1ca665488418c67c32e/latest/model"
+auth = ("2ctum3bdEbN2b5EOxA5IQuxfprqLK5UGxfNkxgwmpeQ1jPW8vqXU9HDyR6SZzL3T",
+        "2ctum3bdEbN2b5EOxA5IQuxfprqLK5UGxfNkxgwmpeQ1jPW8vqXU9HDyR6SZzL3T")
 
 
 def login_api(name, password):
