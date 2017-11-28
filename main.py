@@ -97,9 +97,10 @@ def desempeno():
         text = menu_left('desempeno')
         titulo = 'Capstone UC - Desempeño'
         header = 'Predicción de desempeño'
-        response = desempeno_api(user.name, user.password)
+        response = desempeno_api(user.name, user.password, 'Accessories',
+                                 '10', '10', '10', '10')
         if response.status_code == 200:
-            body = 'Desempeño esperado de nuevos clientes'
+            body = str(response['result'])
         else:
             body = 'No fue posible establecer conexión con DominoDatalab'
         return render_template('dashboard.html', titulo=titulo, header=header,
