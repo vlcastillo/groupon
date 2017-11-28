@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81a708fa-250e-4af4-a13e-2f1eeea7a0aa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-    </list>
+    <list default="true" id="81a708fa-250e-4af4-a13e-2f1eeea7a0aa" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,14 +24,14 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="119" column="56" lean-forward="false" selection-start-line="119" selection-start-column="56" selection-end-line="119" selection-end-column="56" />
+            <state relative-caret-position="-65">
+              <caret line="110" column="39" lean-forward="false" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
                 <element signature="e#1678#2042#0" expanded="false" />
                 <element signature="e#2103#2716#0" expanded="false" />
-                <element signature="e#5408#5499#0" expanded="false" />
-                <element signature="e#5527#6340#0" expanded="false" />
+                <element signature="e#5413#5504#0" expanded="false" />
+                <element signature="e#5532#6345#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -114,8 +111,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="507" />
-    <option name="width" value="866" />
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -490,7 +487,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="507" y="0" width="866" height="735" extended-state="0" />
+    <frame x="-7" y="0" width="697" height="735" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -501,7 +498,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24584718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4551495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29900333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42192692" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -652,14 +649,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="119" column="56" lean-forward="false" selection-start-line="119" selection-start-column="56" selection-end-line="119" selection-end-column="56" />
+        <state relative-caret-position="-65">
+          <caret line="110" column="39" lean-forward="false" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
             <element signature="e#1678#2042#0" expanded="false" />
             <element signature="e#2103#2716#0" expanded="false" />
-            <element signature="e#5408#5499#0" expanded="false" />
-            <element signature="e#5527#6340#0" expanded="false" />
+            <element signature="e#5413#5504#0" expanded="false" />
+            <element signature="e#5532#6345#0" expanded="false" />
           </folding>
         </state>
       </provider>
