@@ -44,11 +44,10 @@ def login():
     message = ''
     if form.validate_on_submit():
         user = User(form.username.data, form.password.data)
-        remember = form.remember.data
         response = login_api(user.name, user.password)
         if response.status_code == 200:
             if response.json()['result'] == [1]:
-                login_user(user, remember=remember)
+                login_user(user, remember=True)
                 user.connected = True
                 return redirect(url_for('mainmenu'))
             else:
@@ -101,18 +100,24 @@ def desempeno():
             qw = form.quality_web.data
             rr = form.research_rk.data
             gs = form.google_st.data
-            response = desempeno_api(user.name, user.password,
-                                     cat, ql, qw, rr, gs)
-            if response.status_code == 200:
-                result = response.json()
-                if len(result) == 1:
-                    table = '<h3>Parámetros inválidos o ' \
-                            'Categoría incompleta</h3>'
+            try:
+                for quality in [float(ql), float(qw), float(rr), float(gs)]:
+                    if quality < 0 or quality > 10:
+                        raise ValueError
+                response = desempeno_api(user.name, user.password,
+                                         cat, ql, qw, rr, gs)
+                if response.status_code == 200:
+                    result = response.json()
+                    if len(result) == 1:
+                        table = '<h3>Categoría no existente o incompleta</h3>'
+                    else:
+                        result = [str(i) for i in result['result']]
+                        table = '<h3>' + ' , '.join(result) + '</h3>'
                 else:
-                    result = [str(i) for i in result]
-                    table = '<h3>' + ' , '.join(result) + '</h3>'
-            else:
-                table = '<h3>No fue posible establecer conexión con Domino</h3>'
+                    table = '<h3>No fue posible establecer ' \
+                            'conexión con Domino</h3>'
+            except ValueError:
+                table = '<h3>Parámetros inválidos</h3>'
         else:
             table = ''
         text = menu_left('desempeno')
