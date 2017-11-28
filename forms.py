@@ -9,3 +9,11 @@ class LoginForm(FlaskForm):
     password = PasswordField('Contraseña', validators=[InputRequired(),
                                                        Length(min=8, max=80)])
     remember = BooleanField('Recordar')
+
+
+class PrediccionForm(FlaskForm):
+    categoria = StringField('Categoria', validators=[InputRequired()])
+    quality_loc = StringField('Quality Location', validators=[InputRequired()])
+    quality_web = StringField('Quality Website', validators=[InputRequired()])
+    research_rk = StringField('Research Ranking', validators=[InputRequired()])
+    google_st = StringField('Google Street View', validators=[InputRequired()])

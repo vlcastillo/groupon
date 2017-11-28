@@ -3,7 +3,7 @@ from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager, UserMixin, login_user, \
                         login_required, logout_user
-from forms import LoginForm
+from forms import LoginForm, PrediccionForm
 
 
 app = Flask(__name__)
@@ -90,23 +90,37 @@ def demanda():
     return redirect(url_for('login'))
 
 
-@app.route('/desempeno')
+@app.route('/desempeno', methods=['GET', 'POST'])
 @login_required
 def desempeno():
     if user.connected:
+        form = PrediccionForm()
+        if form.validate_on_submit():
+            cat = form.categoria.data
+            ql = form.quality_loc.data
+            qw = form.quality_web.data
+            rr = form.research_rk.data
+            gs = form.google_st.data
+            response = desempeno_api(user.name, user.password,
+                                     cat, ql, qw, rr, gs)
+            if response.status_code == 200:
+                result = response.json()
+                if len(result) == 1:
+                    table = '<h3>Parámetros inválidos o ' \
+                            'Categoría incompleta</h3>'
+                else:
+                    result = [str(i) for i in result]
+                    table = '<h3>' + ' , '.join(result) + '</h3>'
+            else:
+                table = '<h3>No fue posible establecer conexión con Domino</h3>'
+        else:
+            table = ''
         text = menu_left('desempeno')
         titulo = 'Capstone UC - Desempeño'
         header = 'Predicción de desempeño'
         body = 'Predicción de desempeño según categoría y qualities'
-        response = desempeno_api(user.name, user.password, 'Accessories',
-                                 '10', '10', '10', '10')
-        if response.status_code == 200:
-            table = ' , '.join([str(i) for i in response.json()['result']])
-        else:
-            table = 'No fue posible establecer conexión con Domino'
         return render_template('dashboard.html', titulo=titulo, header=header,
-                               body=body, text=text,
-                               table='Aqui va el formulario')
+                               body=body, text=text, table=table)
     return redirect(url_for('login'))
 
 
