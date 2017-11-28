@@ -120,7 +120,7 @@ def desempeno():
                                        'percentil 75 en los primeros 30 días: ',
                                        'Percentil 75 del número de cupones '
                                        'vendidos: ',
-                                       'Percentil 75 del cash-in: ',
+                                       'Percentil 75 del cash-in: $USD ',
                                        'Precisión del modelo en el '
                                        'entrenamiento: ']
                         order = [4, 0, 3, 1, 2]
