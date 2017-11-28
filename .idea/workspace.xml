@@ -27,14 +27,14 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="116" column="39" lean-forward="true" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
+            <state relative-caret-position="275">
+              <caret line="121" column="57" lean-forward="true" selection-start-line="121" selection-start-column="57" selection-end-line="121" selection-end-column="57" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
                 <element signature="e#1678#2042#0" expanded="false" />
                 <element signature="e#2103#2716#0" expanded="false" />
-                <element signature="e#4693#4784#0" expanded="false" />
-                <element signature="e#4812#5625#0" expanded="false" />
+                <element signature="e#5183#5274#0" expanded="false" />
+                <element signature="e#5302#6115#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -114,8 +114,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
+    <option name="x" value="780" />
+    <option name="width" value="593" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -490,7 +490,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="0" width="697" height="735" extended-state="0" />
+    <frame x="780" y="0" width="593" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -652,14 +652,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="116" column="39" lean-forward="true" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
+        <state relative-caret-position="275">
+          <caret line="121" column="57" lean-forward="true" selection-start-line="121" selection-start-column="57" selection-end-line="121" selection-end-column="57" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
             <element signature="e#1678#2042#0" expanded="false" />
             <element signature="e#2103#2716#0" expanded="false" />
-            <element signature="e#4693#4784#0" expanded="false" />
-            <element signature="e#4812#5625#0" expanded="false" />
+            <element signature="e#5183#5274#0" expanded="false" />
+            <element signature="e#5302#6115#0" expanded="false" />
           </folding>
         </state>
       </provider>

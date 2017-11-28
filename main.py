@@ -112,9 +112,12 @@ def desempeno():
                         table = '<h3>Categoría no existente o incompleta</h3>'
                     else:
                         result = [str(round(float(i), 2)) for i in result]
-                        description = ['Confianza en predicción de cash-in: ',
-                                       'Confianza en predicción del '
-                                       'número de cupones vendidos: ',
+                        description = ['Probabilidad de obtener un cash-in por'
+                                       ' sobre el percentil 75 en '
+                                       'los primeros 30 días: ',
+                                       'Probabilidad de obtener un número de '
+                                       'cupones vendidos por sobre el '
+                                       'percentil 75 en los primeros 30 días: ',
                                        'Percentil 75 del número de cupones '
                                        'vendidos: ',
                                        'Percentil 75 del cash-in: ',
@@ -122,7 +125,7 @@ def desempeno():
                                        'entrenamiento: ']
                         order = [4, 0, 3, 1, 2]
                         result = [description[i] + result[i] for i in order]
-                        table = '<h3>' + '<br>'.join(result) + '</h3>'
+                        table = '<h3>' + '<br> <br>'.join(result) + '</h3>'
                 else:
                     table = '<h3>No fue posible establecer ' \
                             'conexión con Domino</h3>'
