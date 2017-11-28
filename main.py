@@ -97,12 +97,13 @@ def desempeno():
         text = menu_left('desempeno')
         titulo = 'Capstone UC - Desempeño'
         header = 'Predicción de desempeño'
+        body = 'Predicción de desempeño según categoría y qualities'
         response = desempeno_api(user.name, user.password, 'Accessories',
                                  '10', '10', '10', '10')
         if response.status_code == 200:
-            body = ','.join([str(i) for i in response.json()['result']])
+            table = ' , '.join([str(i) for i in response.json()['result']])
         else:
-            body = 'No fue posible establecer conexión con Domino'
+            table = 'No fue posible establecer conexión con Domino'
         return render_template('dashboard.html', titulo=titulo, header=header,
                                body=body, text=text,
                                table='Aqui va el formulario')

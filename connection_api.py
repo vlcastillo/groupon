@@ -13,6 +13,17 @@ def login_api(name, password):
 
 
 def desempeno_api(name, password, cat, ql, qw, rr, gs):
+    '''
+
+    :param name:
+    :param password:
+    :param cat: Categoria
+    :param ql: quality location
+    :param qw: quality web
+    :param rr: research ranking
+    :param gs: google street view
+    :return:
+    '''
     params = {'data': ['desempeno', name, password, cat, ql, qw, rr, gs]}
     return requests.post(url, auth=auth, json=params)
 
