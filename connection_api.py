@@ -12,11 +12,11 @@ def login_api(name, password):
     return requests.post(url, auth=auth, json=params)
 
 
-def desempeno_api(name, password):
-    params = {'data': ['desempeno', name, password, '', '', '', '', '']}
+def desempeno_api(name, password, cat, ql, qw, rr, gs):
+    params = {'data': ['desempeno', name, password, cat, ql, qw, rr, gs]}
     return requests.post(url, auth=auth, json=params)
 
 
-def demanda_api(name, password, cat, ql, qw, rr, gs):
-    params = {'data': ['demanda', name, password, cat, ql, qw, rr, gs]}
+def demanda_api(name, password):
+    params = {'data': ['demanda', name, password, '', '', '', '', '']}
     return requests.post(url, auth=auth, json=params)
