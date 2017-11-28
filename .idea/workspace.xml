@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a708fa-250e-4af4-a13e-2f1eeea7a0aa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/browserslist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/500.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/basic-table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/charts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/chat.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/compose.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/datatable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/email.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/forms.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/google-maps.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/signin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/signup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/ui.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/src/vector-maps.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/devServer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/manifest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/plugins/caseSensitivePlugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/plugins/copyPlugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/plugins/dashboardPlugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/plugins/extractPlugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/plugins/htmlPlugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/plugins/imageminPlugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/plugins/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/plugins/internal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/rules/css.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/rules/fonts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/rules/images.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/rules/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/rules/js.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/Adminator-admin-dashboard-master/webpack/rules/sass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/CashIn_PDS_por_dia.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/asdf.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/fechas_deals.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/funciones_extra.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/otros/pyga.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connection_api.py" afterPath="$PROJECT_DIR$/connection_api.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,7 +23,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1082">
@@ -81,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connection_api.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="connection_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connection_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="40">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -651,6 +606,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/connection_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1082">
@@ -659,14 +622,6 @@
             <element signature="e#0#64#0" expanded="true" />
             <element signature="e#3620#4433#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connection_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>

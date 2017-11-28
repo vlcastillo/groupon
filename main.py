@@ -66,7 +66,7 @@ def mainmenu():
         text = menu_left('mainmenu')
         titulo = 'Capstone UC - Menú Principal'
         header = 'Inicio'
-        body = 'Seleccionar modelo en el menú lateral.'
+        body = 'Seleccionar modelo en el menú lateral'
         return render_template('dashboard.html', titulo=titulo, header=header,
                                body=body, table='', text=text)
     return redirect(url_for('login'))
@@ -101,7 +101,7 @@ def desempeno():
         if response.status_code == 200:
             body = 'Desempeño esperado de nuevos clientes'
         else:
-            body = 'No fue posible estableces conexión con DominoDatalab'
+            body = 'No fue posible establecer conexión con DominoDatalab'
         return render_template('dashboard.html', titulo=titulo, header=header,
                                body=body, text=text,
                                table='Aqui va el formulario')
